@@ -56,7 +56,7 @@ int main() {
 	// accept(server_fd, (struct sockaddr *) &client_addr, &client_addr_len);
 	int client_fd =
 		accept(server_fd, (struct sockaddr *)&client_addr, &client_addr_len);
-	write(client_fd, "+PONG\r\n". strlen("+PONG\r\n"));
+	write(client_fd, "+PONG\r\n", strlen("+PONG\r\n"));
 	printf("Client connected\n");
 	
 	close(server_fd);
